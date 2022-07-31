@@ -24,6 +24,7 @@
     "task"
   ],
   "scripts": {
+    "develop": "cd example && npm install && npm run start:nodemon",
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
