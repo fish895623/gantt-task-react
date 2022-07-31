@@ -102,6 +102,7 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
   useEffect(() => {
     let filteredTasks: Task[];
     if (onExpanderClick) {
+      // TODO toggle grouping
       filteredTasks = removeHiddenTasks(tasks);
     } else {
       filteredTasks = tasks;

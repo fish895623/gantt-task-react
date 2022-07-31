@@ -17,6 +17,7 @@ export function isBarTask(task: Task | BarTask): task is BarTask {
   return (task as BarTask).x1 !== undefined;
 }
 
+// TODO Toggle groupping
 export function removeHiddenTasks(tasks: Task[]) {
   const groupedTasks = tasks.filter(
     t => t.hideChildren && t.type === "project"
@@ -43,7 +44,7 @@ function getChildren(taskList: Task[], task: Task) {
   var taskChildren: Task[] = [];
   tasks.forEach(t => {
     taskChildren.push(...getChildren(taskList, t));
-  })
+  });
   tasks = tasks.concat(tasks, taskChildren);
   return tasks;
 }

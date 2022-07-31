@@ -46,23 +46,14 @@ export const convertToBarTasks = (
     );
   });
 
-  // TODO set dependencies, subtask
+  // set dependencies
   barTasks = barTasks.map(task => {
     const dependencies = task.dependencies || [];
-    const subtasks = task.subTasks || [];
-
     for (let j = 0; j < dependencies.length; j++) {
       const dependence = barTasks.findIndex(
         value => value.id === dependencies[j]
       );
       if (dependence !== -1) barTasks[dependence].barChildren.push(task);
-    }
-
-    for (let j = 0; j < subtasks.length; j++) {
-      const subtask = barTasks.findIndex(value => value.id === subtasks[j]);
-      if (subtask !== -1) {
-        barTasks[subtask].barChildren.push(task);
-      }
     }
 
     return task;

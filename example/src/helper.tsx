@@ -25,7 +25,7 @@ export function initTasks() {
       id: "Task 0",
       progress: 45,
       type: "task",
-      subTask: ["Task 0.1"],
+      subTasks: ["Task 0.1"],
       project: "ProjectSample",
     },
     {
