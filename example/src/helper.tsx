@@ -11,7 +11,6 @@ export function initTasks() {
       progress: 25,
       type: "project",
       hideChildren: false,
-      displayOrder: 1,
     },
     {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
@@ -26,8 +25,17 @@ export function initTasks() {
       id: "Task 0",
       progress: 45,
       type: "task",
+      subTask: ["Task 0.1"],
       project: "ProjectSample",
-      displayOrder: 2,
+    },
+    {
+      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2),
+      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 3),
+      name: "Idea.1",
+      id: "Task 0.1",
+      progress: 45,
+      type: "task",
+      project: "ProjectSample",
     },
     {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2),
@@ -38,7 +46,6 @@ export function initTasks() {
       dependencies: ["Task 0"],
       type: "task",
       project: "ProjectSample",
-      displayOrder: 3,
     },
     {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 4),
@@ -49,7 +56,6 @@ export function initTasks() {
       dependencies: ["Task 1"],
       type: "task",
       project: "ProjectSample",
-      displayOrder: 4,
     },
     {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 8),
@@ -60,7 +66,6 @@ export function initTasks() {
       dependencies: ["Task 2"],
       type: "task",
       project: "ProjectSample",
-      displayOrder: 5,
     },
     {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 8),
@@ -71,7 +76,6 @@ export function initTasks() {
       progress: 70,
       dependencies: ["Task 2"],
       project: "ProjectSample",
-      displayOrder: 6,
     },
     {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
@@ -82,7 +86,6 @@ export function initTasks() {
       type: "milestone",
       dependencies: ["Task 4"],
       project: "ProjectSample",
-      displayOrder: 7,
     },
     {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 18),
