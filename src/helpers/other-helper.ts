@@ -19,9 +19,12 @@ export function isBarTask(task: Task | BarTask): task is BarTask {
 
 // TODO Toggle groupping
 export function removeHiddenTasks(tasks: Task[]) {
-  const groupedTasks = tasks.filter(
-    t => t.hideChildren && t.type === "project"
-  );
+  const groupedTasks = tasks.filter(t => {
+    t.hideChildren && (t.type === "project" || t.type === "parentTask");
+    console.log(t.id);
+  });
+  tasks.filter(t => console.log(t.type));
+
   if (groupedTasks.length > 0) {
     for (let i = 0; groupedTasks.length > i; i++) {
       const groupedTask = groupedTasks[i];

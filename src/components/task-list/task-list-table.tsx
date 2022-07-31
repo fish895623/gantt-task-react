@@ -57,7 +57,7 @@ export const TaskListTableDefault: React.FC<{
         {
           /* NOTE Folding */
         }
-        console.log(t.subTasks);
+        console.log(t.parentTask);
 
         let expanderSymbol = "";
         if (t.hideChildren === false) {

@@ -24,8 +24,7 @@ export function initTasks() {
       name: "Idea",
       id: "Task 0",
       progress: 45,
-      type: "task",
-      subTasks: ["Task 0.1"],
+      type: "parentTask",
       project: "ProjectSample",
     },
     {
@@ -35,6 +34,7 @@ export function initTasks() {
       id: "Task 0.1",
       progress: 45,
       type: "task",
+      parentTask: "Task 0",
       project: "ProjectSample",
     },
     {
@@ -45,6 +45,7 @@ export function initTasks() {
       progress: 25,
       dependencies: ["Task 0"],
       type: "task",
+      parentTask: "Task 0",
       project: "ProjectSample",
     },
     {
