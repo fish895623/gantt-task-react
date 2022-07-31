@@ -54,6 +54,11 @@ export const TaskListTableDefault: React.FC<{
       }}
     >
       {tasks.map(t => {
+        {
+          /* NOTE Folding */
+        }
+        console.log(t.subTasks);
+
         let expanderSymbol = "";
         if (t.hideChildren === false) {
           expanderSymbol = "▼";

@@ -27,6 +27,7 @@ export interface Task {
   };
   isDisabled?: boolean;
   project?: string;
+  subTasks?: string[];
   dependencies?: string[];
   hideChildren?: boolean;
   displayOrder?: number;
